@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.25)
+project(robot_wrapper)
+
+set(CMAKE_CXX_STANDARD 20)
+
+add_subdirectory(hanwha_robot)
+
+add_library(robot_wrapper STATIC
+        ${CMAKE_CURRENT_LIST_DIR}/src/robot_wrapper.cpp)
+
+target_include_directories(robot_wrapper PUBLIC
+        ${CMAKE_CURRENT_LIST_DIR}/include)
+
+add_exutable(main ${CMAKE_CURRENT_LIST_DIR}/examples/robot_wrapper.cpp)
