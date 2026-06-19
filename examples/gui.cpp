@@ -7,6 +7,8 @@
 #include <chrono>
 #include <mujoco/mujoco.h>
 #include <GLFW/glfw3.h> 
+#include "zenoh.hxx"
+
 
 // --- 전역 변수 및 MuJoCo 객체 ---
 mjModel* m = nullptr;                  
